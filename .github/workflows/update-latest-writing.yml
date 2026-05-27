@@ -5,6 +5,10 @@ on:
     - cron: "0 9 * * 1" # Mondays 09:00 UTC (weekly)
   workflow_dispatch: {}
 
+concurrency:
+  group: latest-writing
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -15,7 +19,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch Substack feed and update README
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch feed and update README
         env:
           FEED_URL: "https://substack-feed-proxy.danieladeniji001.workers.dev/"
         run: |
@@ -26,7 +35,7 @@ jobs:
           from urllib.request import urlopen, Request
           import os
 
-          FEED = os.environ.get("FEED_URL")
+          FEED = os.environ["FEED_URL"]
           START = "<!-- LATEST_SUBSTACK:START -->"
           END = "<!-- LATEST_SUBSTACK:END -->"
           MAX_ITEMS = 4
@@ -34,24 +43,16 @@ jobs:
           req = Request(
             FEED,
             headers={
-              "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+              "User-Agent": "Mozilla/5.0",
               "Accept": "application/rss+xml,application/xml;q=0.9,*/*;q=0.8",
-              "Accept-Language": "en-US,en;q=0.9",
-              "Referer": "https://adeyemiadeniji.substack.com/",
             },
           )
 
-          try:
-            xml = urlopen(req, timeout=25).read()
-          except Exception as e:
-            print(f"Failed to fetch feed: {e}", file=sys.stderr)
-            sys.exit(1)
-
+          xml = urlopen(req, timeout=25).read()
           root = ET.fromstring(xml)
           channel = root.find("channel")
           if channel is None:
-            print("Invalid RSS: missing <channel>", file=sys.stderr)
-            sys.exit(1)
+            raise RuntimeError("Invalid RSS: missing <channel>")
 
           items = channel.findall("item")[:MAX_ITEMS]
 
@@ -61,20 +62,21 @@ jobs:
             link = (it.findtext("link") or "").strip()
             pub = (it.findtext("pubDate") or "").strip()
 
-            date = pub
+            date = ""
             try:
               date = datetime.datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z").date().isoformat()
             except Exception:
-              date = (pub[:16] if pub else "")
+              date = pub[:16] if pub else ""
 
-            rows.append(f"| {title} | {date} | [Read]({link}) |")
+            # Cleaner table: title is the link
+            rows.append(f"| [{title}]({link}) | {date} |")
 
           if not rows:
-            rows.append("| (no posts found) |  |  |")
+            rows.append("| (no posts found) |  |")
 
           table = "\n".join([
-            "| Title | Date | Link |",
-            "|---|---:|---|",
+            "| Latest writing | Date |",
+            "|---|---:|",
             *rows,
           ])
 
@@ -83,11 +85,9 @@ jobs:
 
           pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
           if not pattern.search(readme):
-            print("Could not find markers in README.md", file=sys.stderr)
-            sys.exit(1)
+            raise RuntimeError("Could not find LATEST_SUBSTACK markers in README.md")
 
-          replacement = START + "\n" + table + "\n" + END
-          new = pattern.sub(replacement, readme)
+          new = pattern.sub(START + "\n" + table + "\n" + END, readme)
 
           if new == readme:
             print("No changes needed.")
@@ -104,5 +104,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "chore: update latest writing" || exit 0
+          git diff --cached --quiet && echo "No changes to commit." && exit 0
+          git commit -m "chore: update latest writing"
           git push

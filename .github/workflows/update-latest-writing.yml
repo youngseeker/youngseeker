@@ -16,28 +16,48 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Fetch Substack feed and update README
+        env:
+          FEED_URL: "https://adeyemiadeniji.substack.com/feed"
         run: |
           python - << 'PY'
           import re, sys
           import datetime
           import xml.etree.ElementTree as ET
           from urllib.request import urlopen, Request
+          import os
 
-          FEED = "https://adeyemiadeniji.substack.com/feed"
+          FEED = os.environ.get("FEED_URL")
           START = "<!-- LATEST_SUBSTACK:START -->"
           END = "<!-- LATEST_SUBSTACK:END -->"
           MAX_ITEMS = 4
 
-          req = Request(FEED, headers={"User-Agent": "github-profile-readme-bot"})
-          xml = urlopen(req).read()
-          root = ET.fromstring(xml)
+          req = Request(
+            FEED,
+            headers={
+              "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+              "Accept": "application/rss+xml,application/xml;q=0.9,*/*;q=0.8",
+              "Accept-Language": "en-US,en;q=0.9",
+              "Referer": "https://adeyemiadeniji.substack.com/",
+            },
+          )
 
+          try:
+            xml = urlopen(req, timeout=25).read()
+          except Exception as e:
+            print(f"Failed to fetch feed: {e}", file=sys.stderr)
+            sys.exit(1)
+
+          root = ET.fromstring(xml)
           channel = root.find("channel")
+          if channel is None:
+            print("Invalid RSS: missing <channel>", file=sys.stderr)
+            sys.exit(1)
+
           items = channel.findall("item")[:MAX_ITEMS]
 
           rows = []
           for it in items:
-            title = (it.findtext("title") or "").strip()
+            title = (it.findtext("title") or "").strip().replace("|", "\\|")
             link = (it.findtext("link") or "").strip()
             pub = (it.findtext("pubDate") or "").strip()
 
@@ -45,27 +65,28 @@ jobs:
             try:
               date = datetime.datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z").date().isoformat()
             except Exception:
-              date = pub[:16]
+              date = (pub[:16] if pub else "")
 
-            title = title.replace("|", "\\|")
             rows.append(f"| {title} | {date} | [Read]({link}) |")
+
+          if not rows:
+            rows.append("| (no posts found) |  |  |")
 
           table = "\n".join([
             "| Title | Date | Link |",
             "|---|---:|---|",
-            *rows
+            *rows,
           ])
 
           with open("README.md", "r", encoding="utf-8") as f:
             readme = f.read()
 
           pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
-          replacement = START + "\n" + table + "\n" + END
-
           if not pattern.search(readme):
             print("Could not find markers in README.md", file=sys.stderr)
             sys.exit(1)
 
+          replacement = START + "\n" + table + "\n" + END
           new = pattern.sub(replacement, readme)
 
           if new == readme:
@@ -74,6 +95,7 @@ jobs:
 
           with open("README.md", "w", encoding="utf-8") as f:
             f.write(new)
+
           print("README updated.")
           PY
 

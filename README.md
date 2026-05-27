@@ -64,12 +64,12 @@
 
 ## GitHub stats (themed to brand blue #2B59C3)
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=youngseeker&show_icons=true&include_all_commits=true&count_private=true&title_color=2B59C3&icon_color=2B59C3&text_color=111827&bg_color=ffffff&border_color=2B59C3" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=youngseeker&show_icons=true&include_all_commits=true&count_private=true&title_color=2B59C3&icon_color=2B59C3&text_color=111827&bg_color=ffffff&border_color=2B59C3&cache_seconds=86400" />
   <img height="165" src="https://streak-stats.demolab.com?user=youngseeker&ring=2B59C3&fire=2B59C3&currStreakLabel=2B59C3&sideLabels=2B59C3&border=2B59C3" />
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=youngseeker&layout=compact&langs_count=10&title_color=2B59C3&text_color=111827&bg_color=ffffff&border_color=2B59C3" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=youngseeker&layout=compact&langs_count=10&title_color=2B59C3&text_color=111827&bg_color=ffffff&border_color=2B59C3&cache_seconds=86400" />
 </p>
 
 ---
@@ -78,10 +78,10 @@
 - Substack: https://adeyemiadeniji.substack.com/
 
 <!-- LATEST_SUBSTACK:START -->
-| Title | Date | Link |
-|---|---:|---|
-| The Aura Paradox | 2026-05-17 | [Read](https://adeyemiadeniji.substack.com/p/the-aura-paradox) |
-| What Systems Look Like When They Wear a Human Face | 2026-05-11 | [Read](https://adeyemiadeniji.substack.com/p/what-systems-look-like-when-they) |
-| The Story I Kept Telling About Myself (And What It Was Actually Doing) | 2026-05-03 | [Read](https://adeyemiadeniji.substack.com/p/the-story-i-kept-telling-about-myself) |
-| Half‑Information Is More Dangerous Than a Lie | 2026-03-29 | [Read](https://adeyemiadeniji.substack.com/p/halfinformation-is-more-dangerous) |
+| Latest writing | Date |
+|---|---:|
+| [The Aura Paradox](https://adeyemiadeniji.substack.com/p/the-aura-paradox) | 2026-05-17 |
+| [What Systems Look Like When They Wear a Human Face](https://adeyemiadeniji.substack.com/p/what-systems-look-like-when-they) | 2026-05-11 |
+| [The Story I Kept Telling About Myself (And What It Was Actually Doing)](https://adeyemiadeniji.substack.com/p/the-story-i-kept-telling-about-myself) | 2026-05-03 |
+| [Half‑Information Is More Dangerous Than a Lie](https://adeyemiadeniji.substack.com/p/halfinformation-is-more-dangerous) | 2026-03-29 |
 <!-- LATEST_SUBSTACK:END -->

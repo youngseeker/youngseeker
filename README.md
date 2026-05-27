@@ -8,6 +8,7 @@
 
 <p align="center">
   <a href="https://adeyemiadeniji.vercel.app" target="_blank"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-2B59C3?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  <a href="https://adeyemiadeniji.substack.com" target="_blank"><img alt="Substack" src="https://img.shields.io/badge/Substack-FF6719?style=for-the-badge&logo=substack&logoColor=white"></a>
   <a href="https://linktr.ee/_adeyemiadeniji" target="_blank"><img alt="Linktree" src="https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/adeyemi-adeniji-828204253/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-2B59C3?style=for-the-badge&logo=linkedin&logoColor=white"></a>
   <a href="mailto:danieladeniji001@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-111827?style=for-the-badge&logo=gmail&logoColor=white"></a>
@@ -74,7 +75,13 @@
 ---
 
 ## Writing (latest)
-If you want, I’ll wire this to auto-update (via GitHub Actions) once you confirm your feed/source.
+- Substack: https://adeyemiadeniji.substack.com/
 
-- Digital Garden: https://adeyemiadeniji.vercel.app/garden
-- Articles repo: https://youngseeker.github.io/articles/
+<!-- LATEST_SUBSTACK:START -->
+<!-- This section is auto-updated weekly from the Substack RSS feed. -->
+
+| Title | Date | Link |
+|---|---:|---|
+| (loading...) |  |  |
+
+<!-- LATEST_SUBSTACK:END -->

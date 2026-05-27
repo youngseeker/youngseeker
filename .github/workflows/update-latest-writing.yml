@@ -1,0 +1,86 @@
+name: Update latest writing (Substack)
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays 09:00 UTC (weekly)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch Substack feed and update README
+        run: |
+          python - << 'PY'
+          import re, sys
+          import datetime
+          import xml.etree.ElementTree as ET
+          from urllib.request import urlopen, Request
+
+          FEED = "https://adeyemiadeniji.substack.com/feed"
+          START = "<!-- LATEST_SUBSTACK:START -->"
+          END = "<!-- LATEST_SUBSTACK:END -->"
+          MAX_ITEMS = 4
+
+          req = Request(FEED, headers={"User-Agent": "github-profile-readme-bot"})
+          xml = urlopen(req).read()
+          root = ET.fromstring(xml)
+
+          channel = root.find("channel")
+          items = channel.findall("item")[:MAX_ITEMS]
+
+          rows = []
+          for it in items:
+            title = (it.findtext("title") or "").strip()
+            link = (it.findtext("link") or "").strip()
+            pub = (it.findtext("pubDate") or "").strip()
+
+            date = pub
+            try:
+              date = datetime.datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z").date().isoformat()
+            except Exception:
+              date = pub[:16]
+
+            title = title.replace("|", "\\|")
+            rows.append(f"| {title} | {date} | [Read]({link}) |")
+
+          table = "\n".join([
+            "| Title | Date | Link |",
+            "|---|---:|---|",
+            *rows
+          ])
+
+          with open("README.md", "r", encoding="utf-8") as f:
+            readme = f.read()
+
+          pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
+          replacement = START + "\n" + table + "\n" + END
+
+          if not pattern.search(readme):
+            print("Could not find markers in README.md", file=sys.stderr)
+            sys.exit(1)
+
+          new = pattern.sub(replacement, readme)
+
+          if new == readme:
+            print("No changes needed.")
+            sys.exit(0)
+
+          with open("README.md", "w", encoding="utf-8") as f:
+            f.write(new)
+          print("README updated.")
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update latest writing" || exit 0
+          git push

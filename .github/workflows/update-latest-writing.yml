@@ -17,7 +17,7 @@ jobs:
 
       - name: Fetch Substack feed and update README
         env:
-          FEED_URL: "https://adeyemiadeniji.substack.com/feed"
+          FEED_URL: "https://substack-feed-proxy.danieladeniji001.workers.dev/"
         run: |
           python - << 'PY'
           import re, sys

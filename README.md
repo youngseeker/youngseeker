@@ -78,10 +78,10 @@
 - Substack: https://adeyemiadeniji.substack.com/
 
 <!-- LATEST_SUBSTACK:START -->
-<!-- This section is auto-updated weekly from the Substack RSS feed. -->
-
 | Title | Date | Link |
 |---|---:|---|
-| (loading...) |  |  |
-
+| The Aura Paradox | 2026-05-17 | [Read](https://adeyemiadeniji.substack.com/p/the-aura-paradox) |
+| What Systems Look Like When They Wear a Human Face | 2026-05-11 | [Read](https://adeyemiadeniji.substack.com/p/what-systems-look-like-when-they) |
+| The Story I Kept Telling About Myself (And What It Was Actually Doing) | 2026-05-03 | [Read](https://adeyemiadeniji.substack.com/p/the-story-i-kept-telling-about-myself) |
+| Half‑Information Is More Dangerous Than a Lie | 2026-03-29 | [Read](https://adeyemiadeniji.substack.com/p/halfinformation-is-more-dangerous) |
 <!-- LATEST_SUBSTACK:END -->

@@ -80,8 +80,8 @@
 <!-- LATEST_SUBSTACK:START -->
 | Latest writing | Date |
 |---|---:|
+| [Positive Ignorance: The Art of Not Knowing Enough to Stop](https://adeyemiadeniji.substack.com/p/positive-ignorance-the-art-of-not) | 2026-06-08 |
 | [The Aura Paradox](https://adeyemiadeniji.substack.com/p/the-aura-paradox) | 2026-05-17 |
 | [What Systems Look Like When They Wear a Human Face](https://adeyemiadeniji.substack.com/p/what-systems-look-like-when-they) | 2026-05-11 |
 | [The Story I Kept Telling About Myself (And What It Was Actually Doing)](https://adeyemiadeniji.substack.com/p/the-story-i-kept-telling-about-myself) | 2026-05-03 |
-| [Half‑Information Is More Dangerous Than a Lie](https://adeyemiadeniji.substack.com/p/halfinformation-is-more-dangerous) | 2026-03-29 |
 <!-- LATEST_SUBSTACK:END -->

@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://adeyemiadeniji.vercel.app" target="_blank"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-2B59C3?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  <a href="https://www.adeyemiadeniji.dev/" target="_blank"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-2B59C3?style=for-the-badge&logo=vercel&logoColor=white"></a>
   <a href="https://adeyemiadeniji.substack.com" target="_blank"><img alt="Substack" src="https://img.shields.io/badge/Substack-FF6719?style=for-the-badge&logo=substack&logoColor=white"></a>
   <a href="https://linktr.ee/_adeyemiadeniji" target="_blank"><img alt="Linktree" src="https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/adeyemi-adeniji-828204253/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-2B59C3?style=for-the-badge&logo=linkedin&logoColor=white"></a>
@@ -43,7 +43,7 @@
 
 | Project | What it is | Stack | Live / Repo |
 |---|---|---|---|
-| **Brand Platform / Digital Garden** | Portfolio + writing platform (systems + publishing workflow) | Astro, TypeScript | **Live:** https://adeyemiadeniji.vercel.app · **Repo:** (private) |
+| **Brand Platform / Digital Garden** | Portfolio + writing platform (systems + publishing workflow) | Astro, TypeScript | **Live:** https://adeyemiadeniji.dev · **Repo:** (private) |
 | **SCOPE (Currently building)** | Reflective articulation workspace for clarity + decision quality | Node.js, Full-stack | **Live:** https://scope.samsoyombo.com/ |
 | **RILayer** | Reflective intelligence infrastructure (uncertainty + responsible AI use) | Full-stack, systems | **Live:** https://rilayer.com/ |
 | **Articles** | Writing/publication surface (TypeScript) | TypeScript | **Live:** https://youngseeker.github.io/articles/ · **Repo:** https://github.com/youngseeker/articles |
@@ -55,8 +55,8 @@
 
 ## Live preview (clickable)
 <p>
-  <a href="https://adeyemiadeniji.vercel.app" target="_blank">
-    <img alt="Portfolio preview" src="https://api.microlink.io/?url=https%3A%2F%2Fadeyemiadeniji.vercel.app&screenshot=true&meta=false&embed=screenshot.url" />
+  <a href="https://adeyemiadeniji.dev" target="_blank">
+    <img alt="Portfolio preview" src="https://api.microlink.io/?url=https%3A%2F%2Fadeyemiadeniji.dev&screenshot=true&meta=false&embed=screenshot.url" />
   </a>
 </p>
 

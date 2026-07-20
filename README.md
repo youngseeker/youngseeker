@@ -80,8 +80,8 @@
 <!-- LATEST_SUBSTACK:START -->
 | Latest writing | Date |
 |---|---:|
+| [Comfortable Fog](https://adeyemiadeniji.substack.com/p/comfortable-fog) | 2026-07-17 |
+| [The More You Know, the Less You Need to Prove](https://adeyemiadeniji.substack.com/p/the-more-you-know-the-less-you-need) | 2026-07-15 |
 | [What Reflection Is Teaching Me](https://adeyemiadeniji.substack.com/p/what-reflection-is-teaching-me) | 2026-06-24 |
 | [Positive Ignorance: The Art of Not Knowing Enough to Stop](https://adeyemiadeniji.substack.com/p/positive-ignorance-the-art-of-not) | 2026-06-08 |
-| [The Aura Paradox](https://adeyemiadeniji.substack.com/p/the-aura-paradox) | 2026-05-17 |
-| [What Systems Look Like When They Wear a Human Face](https://adeyemiadeniji.substack.com/p/what-systems-look-like-when-they) | 2026-05-11 |
 <!-- LATEST_SUBSTACK:END -->

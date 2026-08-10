@@ -80,8 +80,8 @@
 <!-- LATEST_SUBSTACK:START -->
 | Latest writing | Date |
 |---|---:|
+| [The Most Dangerous Deadline Is the One Nobody Gave You](https://adeyemiadeniji.substack.com/p/the-most-dangerous-deadline-is-the) | 2026-08-05 |
 | [Comfortable Fog](https://adeyemiadeniji.substack.com/p/comfortable-fog) | 2026-07-17 |
 | [The More You Know, the Less You Need to Prove](https://adeyemiadeniji.substack.com/p/the-more-you-know-the-less-you-need) | 2026-07-15 |
 | [What Reflection Is Teaching Me](https://adeyemiadeniji.substack.com/p/what-reflection-is-teaching-me) | 2026-06-24 |
-| [Positive Ignorance: The Art of Not Knowing Enough to Stop](https://adeyemiadeniji.substack.com/p/positive-ignorance-the-art-of-not) | 2026-06-08 |
 <!-- LATEST_SUBSTACK:END -->

@@ -148,14 +148,12 @@ I publish long-form field notes exploring systems thinking, decision quality, se
 https://adeyemiadeniji.substack.com/
 
 <!-- LATEST_SUBSTACK:START -->
-
-| Latest writing                                                                                                                     |       Date |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------: |
+| Latest writing | Date |
+|---|---:|
+| [Are You Confident, or Are You Just Good at Proving Yourself?](https://adeyemiadeniji.substack.com/p/are-you-confident) | 2026-08-30 |
+| [Integrity Is What Happens When Your Values Become Inconvenient](https://adeyemiadeniji.substack.com/p/architecture-of-integrity) | 2026-08-23 |
 | [The Most Dangerous Deadline Is the One Nobody Gave You](https://adeyemiadeniji.substack.com/p/the-most-dangerous-deadline-is-the) | 2026-08-05 |
-| [Comfortable Fog](https://adeyemiadeniji.substack.com/p/comfortable-fog)                                                           | 2026-07-17 |
-| [The More You Know, the Less You Need to Prove](https://adeyemiadeniji.substack.com/p/the-more-you-know-the-less-you-need)         | 2026-07-15 |
-| [What Reflection Is Teaching Me](https://adeyemiadeniji.substack.com/p/what-reflection-is-teaching-me)                             | 2026-06-24 |
-
+| [Comfortable Fog](https://adeyemiadeniji.substack.com/p/comfortable-fog) | 2026-07-17 |
 <!-- LATEST_SUBSTACK:END -->
 
 ---

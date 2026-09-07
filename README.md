@@ -150,10 +150,10 @@ https://adeyemiadeniji.substack.com/
 <!-- LATEST_SUBSTACK:START -->
 | Latest writing | Date |
 |---|---:|
+| [Confidence Is Not the Absence of Doubt](https://adeyemiadeniji.substack.com/p/confidence-is-not-the-absence-of) | 2026-09-06 |
 | [Are You Confident, or Are You Just Good at Proving Yourself?](https://adeyemiadeniji.substack.com/p/are-you-confident) | 2026-08-30 |
 | [Integrity Is What Happens When Your Values Become Inconvenient](https://adeyemiadeniji.substack.com/p/architecture-of-integrity) | 2026-08-23 |
 | [The Most Dangerous Deadline Is the One Nobody Gave You](https://adeyemiadeniji.substack.com/p/the-most-dangerous-deadline-is-the) | 2026-08-05 |
-| [Comfortable Fog](https://adeyemiadeniji.substack.com/p/comfortable-fog) | 2026-07-17 |
 <!-- LATEST_SUBSTACK:END -->
 
 ---
